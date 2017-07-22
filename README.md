@@ -1,5 +1,7 @@
 # YCool
 
+## 偷懒了，直接用[原项目地址](https://github.com/dlyt/YCool_Server),来作为用户本地开发
+
 ## 效果图
 
 ![Octicons](http://p1.bqimg.com/1949/1cc0df484d580e51.gif)
