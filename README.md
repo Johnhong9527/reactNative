@@ -1,6 +1,6 @@
 # YCool
 
-## 偷懒了，直接用[原项目地址](https://github.com/dlyt/YCool_Server),来作为用户本地开发
+## 偷懒了，直接用[YCool原项目地址](https://github.com/dlyt/YCool_Server),来作为用户本地开发
 > 这里做个说明，本项目Android为学习reactNative框架的笔记。ios部分为阅读软件代码，不是我写的
 
 ## 效果图
