@@ -4,31 +4,47 @@ import {
   StyleSheet,
   Text,
   View,
-  Image
+  Image,
+  Button
 } from 'react-native';
+import { StackNavigator } from 'react-navigation';
+// components
+import Greeting from './Greeting'
+import Blink from './Blink'
 
-import Greeting from './ui/Greeting'
-
-export default class YCool extends Component {
+export default class Home extends Component {
+  static navigationOptions = {
+    title: '首页',
+  };
   render() {
     let pic = {
       uri: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg'
     };
+    const { navigate } = this.props.navigation;
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
           Welcome to React Native!,{'\n'}
-          你好！,{'\n'}
           世界！
-          <Image source={pic} style={{width: 193, height: 110}} />
         </Text>
         <Image source={pic} style={{width: '100%', height: 110}} />
         <Text>Hello {this.props.name}!</Text>
         <View style={{alignItems: 'center'}}>
           <Greeting name='Rexxar' />
           <Greeting name='Jaina' />
-          <Greeting name='Valeera' />
         </View>
+        <View>
+          <Blink text='I love to blink' />
+          <Blink text='Yes blinking is so great' />
+          <Blink text='Why did they ever take this out of HTML' />
+          <Blink text='Look at me look at me look at me' />
+      </View>
+      <View>
+        <Button
+          onPress={() => navigate('Mine', {name: 'seam', url:pic})}
+          title="Chat with Lucy"
+        />
+      </View>
       </View>
     );
   }
@@ -38,7 +54,7 @@ export default class YCool extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
+    // justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
